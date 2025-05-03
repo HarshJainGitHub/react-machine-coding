@@ -16,7 +16,7 @@ function App() {
       {/* <Batch /> */}
 
       {/* Consist Implementation of Counter Example */}
-      <CounterExample />
+      {/* <CounterExample /> */}
     </>
   );
 }
