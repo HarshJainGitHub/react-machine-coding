@@ -1,0 +1,13 @@
+.infinite-scroll-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  overflow: hidden auto;
+  gap:10px;
+  background-color: yellow;
+}
+
+.row {
+  border: 1px solid #000;
+}
