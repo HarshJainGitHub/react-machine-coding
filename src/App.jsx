@@ -4,6 +4,7 @@ import Example from "./FeatureFlag/Example";
 import Batch from "./BatchAPICalls/Batch";
 import CounterExample from "./CustomHooks/CounterExample";
 import InfiniteScroll from "./InfiniteScroll/InfiniteScroll";
+import InfiniteScrollIO from "./InfiniteScroll/InfiniteScrollIO";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
 
       {/* Consist Implementation of Counter Example */}
       {/* <CounterExample /> */}
-      <InfiniteScroll />
+      {/* Infinite Scroll Implementation */}
+      {/* <InfiniteScroll /> */}
+      <InfiniteScrollIO />
     </>
   );
 }
