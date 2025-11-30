@@ -5,6 +5,9 @@ import Batch from "./BatchAPICalls/Batch";
 import CounterExample from "./CustomHooks/CounterExample";
 import InfiniteScroll from "./InfiniteScroll/InfiniteScroll";
 import InfiniteScrollIO from "./InfiniteScroll/InfiniteScrollIO";
+import Clock from "./AnalogClock/Clock";
+import Counter from "./Counter/Counter";
+import Accordion from "./Accordion/Accordion";
 
 function App() {
   return (
@@ -20,8 +23,11 @@ function App() {
       {/* Consist Implementation of Counter Example */}
       {/* <CounterExample /> */}
       {/* Infinite Scroll Implementation */}
-      {/* <InfiniteScroll /> */}
-      <InfiniteScrollIO />
+      {/* <InfiniteScroll />
+      <InfiniteScrollIO /> */}
+      {/* <Counter /> */}
+      <Accordion />
+      {/* <Clock /> */}
     </>
   );
 }
