@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { usePrevious } from "./usePrevious";
-import "../App.css";
 
 const CounterExample = () => {
   const [count, setCount] = useState(0);
