@@ -1,6 +1,7 @@
 import React from "react";
 import "./accordion.css";
 
+// toggle with css only
 const Accordion = () => {
   return (
     <div className="accordion">

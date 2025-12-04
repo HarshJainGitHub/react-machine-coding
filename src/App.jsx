@@ -7,7 +7,15 @@ import InfiniteScroll from "./InfiniteScroll/InfiniteScroll";
 import InfiniteScrollIO from "./InfiniteScroll/InfiniteScrollIO";
 import Clock from "./AnalogClock/Clock";
 import Counter from "./Counter/Counter";
-import Accordion from "./Accordion/Accordion";
+// import Accordion from "./Accordion/onlyCss/Accordion";
+import Accordion from "./Accordion/withJS/Accordion";
+import NestedCheckbox from "./NestedCheckbox/NestedCheckbox";
+import ProgressBar from "./ProgressBar/ProgressBar";
+import FileExplorer from "./FileExplorer/FileExplorer";
+import Modal from "./Modal/Modal";
+import AppTest from "./Modal/AppTest";
+
+ const bars = [0, 5, 10, 15, 30, 60, 75, 90, 100];
 
 function App() {
   return (
@@ -26,8 +34,22 @@ function App() {
       {/* <InfiniteScroll />
       <InfiniteScrollIO /> */}
       {/* <Counter /> */}
-      <Accordion />
+      {/* <Accordion /> */}
       {/* <Clock /> */}
+
+      {/* Nested Checkbox Implementation */}
+      {/* <NestedCheckbox /> */}
+      {/* <Accordion /> */}
+      {/* {
+        bars.map((bar,index) => (
+          <ProgressBar key={index} progress={bar} />
+        ))
+      } */}
+
+      {/* <FileExplorer /> */}
+
+      <AppTest />
+
     </>
   );
 }

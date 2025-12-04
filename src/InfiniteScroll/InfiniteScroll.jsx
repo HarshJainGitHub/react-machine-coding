@@ -9,12 +9,12 @@ const InfiniteScroll = () => {
 
   function handleScroll(event) {
     //cursor pointing to the height of the container
-    const clientTop = event.target.scrollTop;
+    const scrollTop = event.target.scrollTop;
     // total height of the container
     const scrollHeight = event.target.scrollHeight;
     // return viewable height of the element
     const clientHeight = event.target.clientHeight;
-    const remainingScroll = scrollHeight - (clientTop + clientHeight);
+    const remainingScroll = scrollHeight - (scrollTop + clientHeight);
 
     if (remainingScroll < SCROLL_THRESHOLD && !isLoading) {
       setLoading(true);

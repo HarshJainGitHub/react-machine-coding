@@ -1,0 +1,97 @@
+/* 1. The Backdrop/Overlay */
+.modal-overlay {
+  position: fixed; /* Stays in place when scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* OR use the modern shorthand: inset: 0; */
+  
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* Ensure it sits on top of everything */
+  
+  /* Optional: Smooth fade-in */
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* 2. The Modal Container */
+.modal-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px; /* Prevents it from getting too wide on desktop */
+  max-height: 90vh; /* Prevents it from being taller than the screen */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack header and content vertically */
+  overflow: hidden; /* Keeps child elements inside rounded corners */
+
+  /* Slide-up animation */
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* 3. Header & Close Button */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb; /* Subtle separator */
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+  padding: 0 8px;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #111827;
+}
+
+/* 4. Content Area */
+.modal-content {
+  padding: 24px;
+  overflow-y: auto; /* scroll internally if content is too long */
+}
+
+/* 5. Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 600px) {
+  .modal-container {
+    width: 90%; /* Give it some breathing room on edges */
+    max-height: 80vh;
+  }
+}
