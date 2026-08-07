@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./clock.css";
 
 const Clock = () => {
@@ -11,20 +11,29 @@ const Clock = () => {
 
     return () => {
       clearInterval(interval);
-    }
+    };
   }, []);
 
   return (
     <div className="clock">
-      <div className="hour_hand"  style={{
-            transform: `rotateZ(${time.getHours() * 30}deg)`
-          }}></div>
-      <div className="min_hand"  style={{
-            transform: `rotateZ(${time.getMinutes() * 6}deg)`
-          }}></div>
-      <div className="sec_hand"  style={{
-            transform: `rotateZ(${time.getSeconds() * 6}deg)`
-          }}></div>
+      <div
+        className="hour_hand"
+        style={{
+          transform: `rotateZ(${time.getHours() * 30}deg)`,
+        }}
+      ></div>
+      <div
+        className="min_hand"
+        style={{
+          transform: `rotateZ(${time.getMinutes() * 6}deg)`,
+        }}
+      ></div>
+      <div
+        className="sec_hand"
+        style={{
+          transform: `rotateZ(${time.getSeconds() * 6}deg)`,
+        }}
+      ></div>
     </div>
   );
 };

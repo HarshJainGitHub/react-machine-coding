@@ -1,4 +1,3 @@
-import React from "react";
 import "./accordion.css";
 
 const Accordion = () => {
@@ -6,7 +5,7 @@ const Accordion = () => {
     <div className="accordion">
       <div className="accordion-item">
         <input type="checkbox" id="item1" />
-        <label for="item1" className="accordion-header">
+        <label htmlFor="item1" className="accordion-header">
           Accordion item 1
         </label>
         <div className="accordion-content">
@@ -20,7 +19,7 @@ const Accordion = () => {
       </div>
       <div className="accordion-item">
         <input type="checkbox" id="item2" />
-        <label for="item2" className="accordion-header">
+        <label htmlFor="item2" className="accordion-header">
           Accordion item 2
         </label>
         <div className="accordion-content">
@@ -34,7 +33,7 @@ const Accordion = () => {
       </div>
       <div className="accordion-item">
         <input type="checkbox" id="item3" />
-        <label for="item3" className="accordion-header">
+        <label htmlFor="item3" className="accordion-header">
           Accordion item 3
         </label>
         <div className="accordion-content">

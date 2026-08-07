@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../InfiniteScroll/infiniteScroll.css";
 
 const InfiniteScrollIO = () => {
@@ -7,8 +7,8 @@ const InfiniteScrollIO = () => {
   const refList = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(function(entries) {
-      if(entries[0].isIntersecting) {
+    const observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
         observer.unobserve(entries[0].target);
         setLoading(true);
         loadMore();
@@ -19,7 +19,7 @@ const InfiniteScrollIO = () => {
     observer.observe(lastElement);
     return () => {
       observer.disconnect();
-    }
+    };
   }, [data.length]);
 
   function loadMore() {

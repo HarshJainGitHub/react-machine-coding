@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 const asyncTask = function (i) {
   return new Promise((resolve, reject) => {
     setTimeout(() => resolve(`Completing ${i}`), 1000);
+    !i && reject(`i is not integer`);
   });
 };
 
@@ -73,7 +74,7 @@ const Batch = () => {
       console.log(e);
     } finally {
       // update the index after the operation
-      if(index < subArrays.length - 1) {
+      if (index < subArrays.length - 1) {
         setIndex(index + 1);
       }
     }
